@@ -1,0 +1,6 @@
+.button {
+	@include buttons(primary);
+}
+.button--ghost {
+	@include buttons(secondary);
+}

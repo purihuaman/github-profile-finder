@@ -1,0 +1,15 @@
+.app {
+	padding: 0 var(--n-padding);
+	padding-top: var(--l-padding);
+	padding-bottom: var(--l-padding);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__title {
+		margin-bottom: var(--x-margin);
+		text-align: center;
+	}
+}

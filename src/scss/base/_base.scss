@@ -1,0 +1,22 @@
+// ==> Estilos base <==
+
+body {
+	transition: var(--transition);
+	color: var(--text-color);
+	background-color: var(--first-bg);
+	background-image: linear-gradient(
+		to bottom,
+		var(--grey-900),
+		var(--grey-rgba)
+	);
+}
+
+// ==> Container general <==
+
+.container {
+	max-width: var(--screen);
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	overflow: hidden;
+}

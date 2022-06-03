@@ -1,0 +1,65 @@
+@mixin querys($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	} @else if type-of($breakpoint) == number and unit($breakpoint) == 'px' {
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	} @else if type-of($breakpoint) == number and unit($breakpoint) == 'rem' {
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	} @else if type-of($breakpoint) == number and unit($breakpoint) == 'em' {
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	}
+}
+
+// ==> Buttons <==
+
+@mixin buttons($color) {
+	@if $color == primary {
+		color: var(--grey-200);
+		background-color: var(--primary-500);
+	} @else if $color == secondary {
+		color: var(--primary-500);
+		background-color: transparent;
+	}
+
+	@include font(small);
+	font-family: inherit;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+	border: none;
+	line-height: initial;
+	padding: 0.6em 1.2em;
+	font-weight: normal;
+	text-align: center;
+	border: 1px solid transparent;
+	transition: color 0.3s, background-color 0.4s, transform 0.3s;
+	border-radius: var(--bradius);
+	border-color: var(--primary-500);
+	cursor: pointer;
+
+	&:active {
+		transform: var(--transform-scale);
+	}
+	&:hover {
+		color: var(--grey-200);
+		background-color: var(--primary-600);
+	}
+}
+
+// ==> Reset list <==
+
+@mixin reset-list {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}

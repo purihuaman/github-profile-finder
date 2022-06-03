@@ -1,0 +1,18 @@
+.sections {
+	padding-bottom: var(--x-padding);
+	border-bottom: 1px solid var(--border-color);
+
+	@include querys(laptops) {
+		display: flex;
+		justify-content: center;
+		gap: var(--n-gap);
+	}
+}
+
+.light-text {
+	color: var(--grey-300);
+}
+
+.text-center {
+	text-align: center;
+}

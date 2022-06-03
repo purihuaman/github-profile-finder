@@ -1,0 +1,59 @@
+:root {
+	--screen: 1440px;
+
+	// ==> Padding <==
+	--s-padding: 0.5rem;
+	--n-padding: 1rem;
+	--l-padding: 1.5rem;
+	--x-padding: 2rem;
+
+	// ==> Margins <==
+	--s-margin: 0.5rem;
+	--n-margin: 1rem;
+	--l-margin: 1.5rem;
+	--x-margin: 2rem;
+
+	// ==> Border Radius <==
+	--bradius: 0.28rem;
+	--bradius-second: 0.8rem;
+
+	// ==> Z-index <==
+	--z-back: -10;
+	--z-normal: 1;
+	--z-tooltip: 10;
+	--z-fixed: 100;
+	--z-modal: 1000;
+
+	// ==> Gaps <==
+	--s-gap: 0.5rem;
+	--n-gap: 1rem;
+	--l-gap: 1.5rem;
+	--x-gap: 2rem;
+
+	// ==> Heights header <==
+	--header-height: 4rem;
+
+	// ==> Box-shadow <==
+	--box-shadow: 0 2px 16px -3px rgba(0, 0, 0, 20%);
+
+	// ==> Transitions <==
+	--transition: background-color 0.5s ease-in, color 0.4s, border-color 0.2s;
+	--transition-scale: transform 0.3s;
+	--transform-scale: scale(0.98);
+
+	// ==> Fonts <==
+
+	--heading-font: 'Quicksand', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu,
+		Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	--main-font: 'Mulish', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Cantarell,
+		Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+// ==> Breapoints <==
+$breakpoints: (
+	phones: 600px,
+	tablets: 768px,
+	laptops: 992px,
+	desktop: 1200px,
+	screen: 1440px,
+);

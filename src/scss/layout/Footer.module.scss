@@ -1,0 +1,26 @@
+@import '../config/vars';
+@import '../config/mixins';
+
+.footer {
+	margin-top: auto;
+	padding: 0 var(--n-padding);
+	transition: var(--transition);
+	background-color: var(--second-bg);
+	box-shadow: var(--box-shadow);
+
+	&__content {
+		padding: var(--l-padding) 0;
+
+		@include querys(tablets) {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__text {
+		text-align: center;
+		flex: 1;
+		color: var(--grey-400);
+	}
+}

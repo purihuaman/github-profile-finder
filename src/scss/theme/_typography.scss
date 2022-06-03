@@ -1,0 +1,107 @@
+// ==> Typography <==
+
+@function font-rem($size, $base: 16px) {
+	@if type-of($size) == number and unit($size) == 'px' {
+		@return (calc($size / $base) * 1rem);
+	}
+}
+
+// ==> Fonts <==
+$fonts: (
+	title1: #{font-rem(48px)} 48px,
+	title2: #{font-rem(32px)} 40px,
+	title3: #{font-rem(25px)} 30px,
+	title4: #{font-rem(20px)} 28px,
+	base: #{font-rem(17px)} 24px,
+	small: #{font-rem(15px)} 18px,
+	smaller: #{font-rem(14px)} 16px,
+);
+
+$bold: 700;
+$semibold: 600;
+$normal: normal;
+
+@mixin font($size) {
+	font-size: nth(map-get($fonts, $size), 1);
+	line-height: nth(map-get($fonts, $size), 2);
+}
+
+h1,
+.title1 {
+	@include font(title2);
+
+	@include querys(laptops) {
+		@include font(title1);
+	}
+}
+
+h2,
+.title2 {
+	@include font(title3);
+	font-weight: $bold;
+
+	@include querys(laptops) {
+		@include font(title2);
+	}
+}
+
+h3,
+.title3 {
+	@include font(title4);
+
+	@include querys(laptops) {
+		@include font(title3);
+	}
+}
+
+h4,
+.title4 {
+	@include font(base);
+
+	@include querys(laptops) {
+		@include font(title4);
+	}
+}
+
+body {
+	font-family: var(--main-font);
+	font-weight: $normal;
+	@include font(base);
+}
+
+small,
+.small {
+	@include font(small);
+}
+
+.smaller {
+	@include font(smaller);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--title-color);
+	font-family: var(--heading-font);
+}
+
+h1,
+h2 {
+	font-weight: $bold;
+}
+
+h3,
+h4,
+h5,
+h6 {
+	font-weight: $semibold;
+}
+
+b,
+strong {
+	font-weight: $semibold;
+	color: var(--title-color);
+}

@@ -1,0 +1,22 @@
+@import '../config/vars';
+@import '../config/mixins';
+
+.card {
+	width: 80%;
+	max-width: 648px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid var(--border-color);
+	border-radius: var(--bradius);
+
+	&__item {
+		padding: var(--l-padding);
+
+		&:last-child {
+			@include querys(tablets) {
+				display: flex;
+				gap: var(--n-gap);
+			}
+		}
+	}
+}

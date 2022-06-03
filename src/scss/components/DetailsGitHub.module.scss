@@ -1,0 +1,10 @@
+.details {
+	// background-color: #aaa;
+
+	&__title {
+		margin: 0;
+	}
+	&__description {
+		margin: var(--s-margin) 0;
+	}
+}

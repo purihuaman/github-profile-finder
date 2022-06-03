@@ -1,0 +1,36 @@
+/* Estilos de scrool */
+
+$sizeScroll: 0.5rem;
+
+*::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+
+*::-webkit-scrollbar-button:increment,
+*::-webkit-scrollbar-button {
+	display: none;
+}
+
+*::-webkit-scrollbar:horizontal {
+	height: $sizeScroll;
+}
+*::-webkit-scrollbar:vertical {
+	width: $sizeScroll;
+}
+
+::-webkit-scrollbar {
+	width: $sizeScroll;
+	border-radius: var(--bradius);
+	transition: background-color 0.5s;
+	background-color: var(--first-bg);
+}
+
+::-webkit-scrollbar-thumb {
+	transition: background-color 0.5s;
+	border-radius: var(--bradius);
+	background-color: var(--primary-500);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--primary-600);
+}

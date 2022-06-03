@@ -1,0 +1,15 @@
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--n-gap);
+
+	&__fields {
+		width: 100%;
+		text-align: center;
+	}
+	&__button {
+		min-width: 200px;
+		color: #fafafa;
+		cursor: pointer;
+	}
+}
