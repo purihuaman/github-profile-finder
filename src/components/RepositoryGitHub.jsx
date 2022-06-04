@@ -1,4 +1,5 @@
 import style from '../scss/components/RepositoryGitHub.module.scss';
+import { Message } from './Message';
 
 export const RepositoryGitHub = ({ myrepos }) => {
 	return (
@@ -20,7 +21,7 @@ export const RepositoryGitHub = ({ myrepos }) => {
 						</a>
 					))
 				) : (
-					<span className='repos__text'>Aún no hay repositorios!.</span>
+					<Message msg='Aún no hay repositorios!.' bg='var(--red-200)' />
 				)}
 			</div>
 		</div>

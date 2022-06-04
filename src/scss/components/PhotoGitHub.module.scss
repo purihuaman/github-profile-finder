@@ -7,6 +7,10 @@
 	padding-bottom: var(--s-padding);
 	margin-bottom: var(--l-margin);
 
+	@include querys(tablets) {
+		border-bottom: 0;
+	}
+
 	&__content {
 		margin-left: auto;
 		margin-right: auto;

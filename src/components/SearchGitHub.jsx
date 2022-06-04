@@ -5,6 +5,7 @@ import { FormGitHub } from './FormGitHub';
 import { PhotoGitHub } from './PhotoGitHub';
 
 import style from '../scss/components/SearchGihub.module.scss';
+import { Message } from './Message';
 
 const API = 'https://api.github.com/users/';
 
@@ -19,7 +20,7 @@ export const SearchGitHub = () => {
 			try {
 				const response = await fetch(API + username);
 				const data = await response.json();
-				console.log(data);
+
 				const {
 					id,
 					avatar_url: avatar,
@@ -59,7 +60,7 @@ export const SearchGitHub = () => {
 
 			<div className={style.card__item}>
 				{!user ? (
-					<div>No hay usuario</div>
+					<Message msg='No existe el usuario' bg='var(--red-200)' />
 				) : (
 					<>
 						<PhotoGitHub photo={user.avatar} author={user.name} />
