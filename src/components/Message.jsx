@@ -1,16 +1,22 @@
 export const Message = ({ msg, bg }) => {
 	const styles = {
-		padding: '.5rem 1rem',
-		marginBottom: '1rem',
+		width: '100%',
+		padding: 'var(--n-padding) var(--n-padding)',
+		marginBottom: 'var(--n-margin)',
 		textAlign: 'center',
 		backgroundColor: bg,
-		borderRadius: '.28rem',
-		border: '1px solid #ff375f',
+		borderRadius: 'var(--bradius)',
+		color: 'var(--red-500)',
+		border: '1px solid var(--red-500)',
+	};
+
+	const text = {
+		margin: '0',
 	};
 
 	return (
 		<div style={styles}>
-			<p>{msg}</p>
+			<p style={text}>{msg}</p>
 		</div>
 	);
 };
