@@ -1,0 +1,34 @@
+.repos {
+	&__title {
+		margin-bottom: var(--s-margin);
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-content: flex-start;
+		flex-wrap: wrap;
+		gap: var(--s-gap);
+		overflow-x: hidden;
+		padding: var(--n-padding) var(--s-padding);
+		padding-bottom: 0;
+	}
+
+	&__item {
+		flex: 1;
+		white-space: nowrap;
+		display: inline-block;
+		padding: var(--s-padding) var(--n-padding);
+		align-self: flex-start;
+		text-align: center;
+		background-color: var(--third-bg);
+		border-radius: var(--bradius);
+		text-decoration: none;
+		color: var(--primary-500);
+	}
+
+	&__text {
+		width: 100%;
+		text-align: center;
+	}
+}

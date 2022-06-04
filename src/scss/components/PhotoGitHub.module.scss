@@ -3,6 +3,9 @@
 
 .photo {
 	background-color: var(--first-bg);
+	border-bottom: 1px solid var(--border-color);
+	padding-bottom: var(--s-padding);
+	margin-bottom: var(--l-margin);
 
 	&__content {
 		margin-left: auto;
